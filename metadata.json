@@ -1,0 +1,11 @@
+{
+	"name": "q2a OTP Register",
+	"uri": "https://github.com/kuddus95/",
+	"description": "A plugin for registration with otp for the users of the forum.",
+	"version": "1.8",
+	"date": "2024-12-15",
+	"author": "Aman", 
+	"author_uri": "http://www.ask-ans.com",
+	"license": "GPLv2",
+	"load_order": "after_db_init"
+}
