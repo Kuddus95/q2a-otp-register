@@ -1,13 +1,4 @@
 <?php
-/*
-Plugin Name: OTP Verification for Registration
-Plugin URI: https://github.com/
-Plugin Description: Adds Firebase OTP verification before user registration.
-Plugin Version: 1.0
-Plugin Date: 2025-06-21
-Plugin Author: Aman
-Plugin License: GPLv2
-*/
 
 if (!defined('QA_VERSION')) {
     header('Location: ../../');
