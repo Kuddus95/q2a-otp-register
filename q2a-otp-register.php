@@ -43,6 +43,11 @@ class q2a_otp_register
                 if (!preg_match('/^[a-zA-Z0-9._%+-]+@gmail\.com$/', $email)) {
                     $errors['email'] = '❌ শুধুমাত্র Gmail অ্যাকাউন্ট ব্যবহার করা যাবে (example@gmail.com)';
                 }
+
+                 // Terms required
+                if (!isset($_POST['terms'])) {
+                    $errors['terms'] = 'আপনাকে অবশ্যই শর্তাবলীতে সম্মত হতে হবে।';
+                }
                 
                 // Validate
                 $errors = array_merge(
@@ -126,7 +131,7 @@ class q2a_otp_register
                 margin-bottom: 10px;
             }
             .qa-form-tall-button {
-                padding: 10px 20px;
+                padding: 10px 10px;
                 background: #28a745;
                 color: white;
                 border: none;
@@ -191,7 +196,14 @@ class q2a_otp_register
             
                 <input type="hidden" name="register_user" value="1">
                 <input type="hidden" name="code" value="<?= qa_get_form_security_code('register') ?>">
-            
+
+                <div style="margin-bottom: 10px;">
+                <label>
+                <input type="checkbox" name="terms" id="terms">
+                <?= qa_opt('register_terms') ?>
+                </label>
+                </div>           
+                
                 <input type="submit" value="Register" class="qa-form-tall-button">
             </form>
 
